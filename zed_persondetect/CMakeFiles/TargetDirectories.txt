@@ -1,0 +1,3 @@
+/usr/local/zed/sample/zed_persondetect/CMakeFiles/edit_cache.dir
+/usr/local/zed/sample/zed_persondetect/CMakeFiles/rebuild_cache.dir
+/usr/local/zed/sample/zed_persondetect/CMakeFiles/ZED_Person_Detect.dir
