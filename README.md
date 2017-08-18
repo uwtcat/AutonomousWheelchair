@@ -11,9 +11,9 @@
 - Download most recent version of CUDA (currently 8.0 is being used)
     - If the computer is not CUDA-capable, some basic functionality of the ZED camera is still possible. The ZED Explorer, which takes RGB images, can still operate. No depth operations are enabled without CUDA. 
 - Download OpenCV. I could get OpenCV 3.1 to work; OpenCV 3.2 did not. On the TX2, OpenCV 2.4.13 is installed.  
-    -	Ensure that previous versions of OpenCV are completely uninstalled. 
+    -   Ensure that previous versions of OpenCV are completely uninstalled. 
     -	When I installed OpenCV 3.1, I ran into some linking errors. Some of these were due to using Ubuntu 14.04, but others had some responses online. From the nvidia help site: go to opencv-3.1.0/modules/cudalegacy/src/graphcuts.cpp (in OpenCV downloaded folder) and alter the #if !defined line at the top such that it reads 
-    -	#if !defined (HAVE_CUDA) || (CUDA_DISABLER) || (CUDART_VERSION <= 8000) 
+    -	#if !defined (HAVE_CUDA) || (CUDA_DISABLER) || (CUDART_VERSION >= 8000) 
 -	Download SDK from the website or from the ZED flash drive. 
     -	http://stereolabs.com/developers/release/2.0
     -	Note that there are different options for windows, linux, TX1 and TX2. 
@@ -70,3 +70,7 @@ Other Code
     -	The parsed annotations can be loaded into a program for easy checking for box overlaps (if testing detector on full-size images or images with multiple people). 
 -	resizeIms and cropIms 
     -	Using OpenCV functions for image editing; resize / crop all images in a directory. 
+    
+### ZED Person Detector
+Written using OpenCV ZED interface sample and code from https://github.com/opencv/opencv/blob/master/samples/cpp/peopledetect.cpp
+Connects to the ZED camera, and runs person detection code on the feed. Note that presently the feed lags behind real-time, as optimization was not performed (i.e. using GPU, etc). 
