@@ -1,0 +1,4 @@
+g++ -std=gnu++1z -Wall -Wextra -pedantic-errors main.cpp -o annotationParser -lstdc++fs
+
+From this stack overflow answer: 
+https://stackoverflow.com/questions/18800244/how-to-use-pascal-annotation-files-to-train-svm-with-c

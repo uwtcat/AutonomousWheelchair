@@ -1,0 +1,3 @@
+/home/csnesummer/Documents/cropIms/build/CMakeFiles/edit_cache.dir
+/home/csnesummer/Documents/cropIms/build/CMakeFiles/rebuild_cache.dir
+/home/csnesummer/Documents/cropIms/build/CMakeFiles/cropIms.dir
