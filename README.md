@@ -50,11 +50,11 @@ Two code bases were considered for the HOG descriptor training process:
     -	Feature calculations occur for all images in the positive and negative target folders using the extractHOGFeatures function. 
 
 #### C++
--	trainHOG-master-trainwithmatlab directory
-   -	Code from the DaHoC repository, mostly commented out so that it only does the following 
-   -	1) Loads MATLAB HOG features.
-   -	2) Calls SVMLight functions through a wrapper class in order to train an LSVM and get a single detecting vector. 
-   -	3) Save detecting vector to file. 
+trainHOG-master-trainwithmatlab directory
+-	Code from the DaHoC repository, mostly commented out so that it only does the following: 
+-	Loads MATLAB HOG features.
+-	Calls SVMLight functions through a wrapper class in order to train an LSVM and get a single detecting vector. 
+-	Save detecting vector to file. 
 
 ### HOG+LSVM Testing
 testHOG directory. Code is also adapted from the DaHoC repository. Loads a file of thresholds for the LSVM (generated in MATLAB with makeThresholds.m), and loads images from positive and negative directories. Uses the OpenCV hog.detect() function, where the thresholds are varied to determine how that effects hit ratio. A file is written with the threshold, and the hit rates. 
